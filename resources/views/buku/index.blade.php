@@ -4,6 +4,17 @@
     <meta charset="utf-8">
     <title>Daftar Buku</title>
 </head>
+
+
+<p>Masuk sebagai {{ auth()->user()->name }}</p>
+
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+
+    <button type="submit">Keluar</button>
+</form>
+
+
 <body>
     <h1>Daftar Buku</h1>
 
