@@ -13,22 +13,22 @@ class BukuSeeder extends Seeder
      */
     public function run(): void
     {
-        $kategori = Kategori::where('nama', 'Pemrograman')->first();
+            $kategori = Kategori::where('nama', 'Pemrograman')->first();
 
-        Buku::firstOrCreate(
-            ['kode' => 'BK001'],
-            [
-                'judul' => 'Dasar PHP',
-                'kategori_id' => $kategori->id
-            ]
-        );
+            Buku::firstOrCreate(
+                ['kode' => 'BK001'],
+                [
+                    'judul' => 'Dasar PHP',
+                    'kategori_id' => $kategori->id
+                ]
+            );
 
-        Buku::firstOrCreate(
-            ['kode' => 'BK002'],
-            [
-                'judul' => 'Belajar Laravel',
-                'kategori_id' => $kategori->id
-            ]
-        );
+            Buku::firstOrCreate(
+                ['kode' => 'BK002'],
+                [
+                    'judul' => 'Belajar Laravel',
+                    'kategori_id' => $kategori->id
+                ]
+            );
     }
 }
